@@ -10,7 +10,13 @@ type SiteContent = {
   slogan: string;
   quoteLabel: string;
   aboutTitle: string;
+  aboutProfileSubtitle: string;
   aboutDesc: string;
+  aboutAdvantagesTitle: string;
+  aboutAdvantagesSubtitle: string;
+  aboutAdvantages: { zh: string; en: string }[];
+  aboutEquipmentTitle: string;
+  aboutEquipmentSubtitle: string;
   nav: NavItem[];
   heroCategories: {
     title: string;
@@ -22,7 +28,7 @@ type SiteContent = {
     productsTitle: string;
     products: {
       name: string;
-      desc: string;
+      nameSub?: string;
       image: string;
     }[];
     technologyTitle: string;
@@ -51,15 +57,26 @@ export const siteContent: Record<Locale, SiteContent> = {
     slogan: "CUSTOM-BUILT · EXPERTLY MADE · 始于 1998",
     quoteLabel: "获取报价",
     aboutTitle: "公司简介",
+    aboutProfileSubtitle: "COMPANY PROFILE",
     aboutDesc:
       "厦门台颖金刚石制品有限公司成立于1998年，专业从事金刚石工具的研发、制造与销售。公司持续引入先进自动化设备，拥有经验丰富的工程师团队，并通过 ISO9001 质量管理体系认证，产品广泛应用于天然石材与人造石材加工。",
+    aboutAdvantagesTitle: "公司优势",
+    aboutAdvantagesSubtitle: "OUR ADVANTAGES",
+    aboutAdvantages: [
+      { zh: "先进制造工艺及装备，保障产品稳定与一致性。", en: "Advanced manufacturing processes and equipment for stability and consistency." },
+      { zh: "6名15年以上经验的机械工程师及金刚石工具专家。", en: "Six senior engineers with 15+ years in mechanical engineering and diamond tools." },
+      { zh: "通过 ISO9001 质量管理体系认证。", en: "ISO9001-certified quality management system." },
+      { zh: "设备齐全，支持特殊规格定制。", en: "Fully equipped facilities supporting customized specifications." },
+    ],
+    aboutEquipmentTitle: "先进的自动化专业制造设备",
+    aboutEquipmentSubtitle: "ADVANCED AUTOMATED PROFESSIONAL MANUFACTURING EQUIPMENT",
     nav: [
-      { key: "首页", href: "#home" },
-      { key: "关于我们", href: "#about" },
-      { key: "产品中心", href: "#products" },
-      { key: "技术能力", href: "#technology" },
-      { key: "全球网络", href: "#network" },
-      { key: "联系我们", href: "#contact" },
+      { key: "首页", href: "/zh" },
+      { key: "关于我们", href: "/zh/about" },
+      { key: "产品中心", href: "/zh/products" },
+      { key: "技术能力", href: "/zh/products#technology" },
+      { key: "全球网络", href: "/zh/products#network" },
+      { key: "联系我们", href: "/zh/products#contact" },
     ],
     heroCategories: [
       { title: "石材切割", image: "/image/第5页-37.PNG" },
@@ -75,19 +92,49 @@ export const siteContent: Record<Locale, SiteContent> = {
       productsTitle: "产品中心",
       products: [
         {
-          name: "石材切割工具",
-          desc: "中径锯片、小锯片、大锯片、绳锯等，覆盖花岗岩、大理石、石英石、岩板等材料。",
-          image: "/image/第5页-37.PNG",
+          name: "电镀线条轮",
+          nameSub: "Electroplated Profile Wheel",
+          image: "/image/dianduxiantiaolun.png",
         },
         {
-          name: "CNC 仿形铣磨工具",
-          desc: "包含定厚轮、线条轮、电镀线条轮、锣边轮与 CNC 相关配套工具。",
-          image: "/image/第16页-153.PNG",
+          name: "电镀轮",
+          nameSub: "Electroplated Wheel",
+          image: "/image/dinhoulun.png",
         },
         {
-          name: "钻削与混凝土工具",
-          desc: "钻管、环锯机、混凝土锯片及墙锯类产品，适配不同施工与加工场景。",
-          image: "/image/第22页-205.PNG",
+          name: "花岗岩锯片",
+          nameSub: "Economical Granite Blade",
+          image: "/image/huagangyan.png",
+        },
+        {
+          name: "环锯片",
+          nameSub: "Ring Saw Blade",
+          image: "/image/huanjvpian.png",
+        },
+        {
+          name: "混凝土锯片",
+          nameSub: "Concrete Saw Blade",
+          image: "/image/hunningtujvpian.png",
+        },
+        {
+          name: "有序排列锯片",
+          nameSub: "Ultra Arix Saw Blade",
+          image: "/image/paixvjvpian.png",
+        },
+        {
+          name: "软磨片",
+          nameSub: "Polishing Pad",
+          image: "/image/ruanmopian.png",
+        },
+        {
+          name: "线条轮",
+          nameSub: "Profile Wheel",
+          image: "/image/xiantiaolun.png",
+        },
+        {
+          name: "岩板锯片",
+          nameSub: "Sintered Stone Slab Blade",
+          image: "/image/yanban.png",
         },
       ],
       technologyTitle: "技术与产能",
@@ -122,15 +169,26 @@ export const siteContent: Record<Locale, SiteContent> = {
     slogan: "Custom-Built, Expertly Made. Since 1998.",
     quoteLabel: "Request a Quote",
     aboutTitle: "Company Profile",
+    aboutProfileSubtitle: "公司简介",
     aboutDesc:
       "Established in 1998, Xiamen Taiying Diamond Products Co., Ltd. specializes in the R&D, manufacturing and sales of diamond tools. Backed by advanced automated equipment, senior engineers and ISO9001-certified quality control, we supply solutions for both natural and engineered stone processing.",
+    aboutAdvantagesTitle: "Our Advantages",
+    aboutAdvantagesSubtitle: "公司优势",
+    aboutAdvantages: [
+      { zh: "先进制造工艺及装备，保障产品稳定与一致性。", en: "Advanced manufacturing processes and equipment for stability and consistency." },
+      { zh: "6名15年以上经验的机械工程师及金刚石工具专家。", en: "Six senior engineers with 15+ years in mechanical engineering and diamond tools." },
+      { zh: "通过 ISO9001 质量管理体系认证。", en: "ISO9001-certified quality management system." },
+      { zh: "设备齐全，支持特殊规格定制。", en: "Fully equipped facilities supporting customized specifications." },
+    ],
+    aboutEquipmentTitle: "Advanced Automated Professional Manufacturing Equipment",
+    aboutEquipmentSubtitle: "先进的自动化专业制造设备",
     nav: [
-      { key: "HOME", href: "#home" },
-      { key: "ABOUT US", href: "#about" },
-      { key: "PRODUCTS", href: "#products" },
-      { key: "TECHNOLOGY", href: "#technology" },
-      { key: "GLOBAL NETWORK", href: "#network" },
-      { key: "CONTACT", href: "#contact" },
+      { key: "HOME", href: "/en" },
+      { key: "ABOUT US", href: "/en/about" },
+      { key: "PRODUCTS", href: "/en/products" },
+      { key: "TECHNOLOGY", href: "/en/products#technology" },
+      { key: "GLOBAL NETWORK", href: "/en/products#network" },
+      { key: "CONTACT", href: "/en/products#contact" },
     ],
     heroCategories: [
       { title: "Stone Cutting", image: "/image/第5页-37.PNG" },
@@ -146,19 +204,49 @@ export const siteContent: Record<Locale, SiteContent> = {
       productsTitle: "Products",
       products: [
         {
-          name: "Stone Cutting Tools",
-          desc: "Medium blades, small blades, big blades and wire saws for granite, marble, quartz and sintered stone.",
-          image: "/image/第5页-37.PNG",
+          name: "Electroplated Profile Wheel",
+          nameSub: "电镀线条轮",
+          image: "/image/dianduxiantiaolun.png",
         },
         {
-          name: "CNC Profiling & Milling",
-          desc: "Calibrating wheels, profile wheels, electroplated profiles, router bits and CNC tool accessories.",
-          image: "/image/第16页-153.PNG",
+          name: "Electroplated Wheel",
+          nameSub: "电镀轮",
+          image: "/image/dinhoulun.png",
         },
         {
-          name: "Drilling & Concrete Tools",
-          desc: "Core drills, ring saw machines, wall blades and concrete cutting tools for construction applications.",
-          image: "/image/第22页-205.PNG",
+          name: "Economical Granite Blade",
+          nameSub: "花岗岩锯片",
+          image: "/image/huagangyan.png",
+        },
+        {
+          name: "Ring Saw Blade",
+          nameSub: "环锯片",
+          image: "/image/huanjvpian.png",
+        },
+        {
+          name: "Concrete Saw Blade",
+          nameSub: "混凝土锯片",
+          image: "/image/hunningtujvpian.png",
+        },
+        {
+          name: "Ultra Arix Saw Blade",
+          nameSub: "有序排列锯片",
+          image: "/image/paixvjvpian.png",
+        },
+        {
+          name: "Polishing Pad",
+          nameSub: "软磨片",
+          image: "/image/ruanmopian.png",
+        },
+        {
+          name: "Profile Wheel",
+          nameSub: "线条轮",
+          image: "/image/xiantiaolun.png",
+        },
+        {
+          name: "Sintered Stone Slab Blade",
+          nameSub: "岩板锯片",
+          image: "/image/yanban.png",
         },
       ],
       technologyTitle: "Technology & Capability",

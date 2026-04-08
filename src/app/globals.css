@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #f4fbfc;
-  --foreground: #0f172a;
+  --background: #020617;
+  --foreground: #e2e8f0;
 }
 
 html {
@@ -44,6 +44,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* 立体金属字：渐变 + 多层 drop-shadow 模拟厚度与顶光 */
