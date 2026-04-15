@@ -3,9 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { FormEvent } from "react";
+import { useEffect, useState } from "react";
 import type { Locale } from "@/lib/site-content";
 
 type NavItem = { key: string; href: string };
+
+/** 与 `trailingSlash: true` 及 Link 的 href 写法对齐，用于判断当前路由 */
+function pathnameWithoutTrailingSlash(path: string) {
+  const noHash = path.split("#")[0] ?? path;
+  if (noHash.length <= 1) return noHash || "/";
+  return noHash.replace(/\/+$/, "") || "/";
+}
 
 type Props = {
   locale: Locale;
@@ -15,6 +23,13 @@ type Props = {
 
 export function SiteHeader({ locale, nav, page = "home" }: Props) {
   const pathname = usePathname() ?? `/${locale}`;
+  const [locationHash, setLocationHash] = useState("");
+  useEffect(() => {
+    setLocationHash(window.location.hash);
+    const onHashChange = () => setLocationHash(window.location.hash);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [pathname]);
   const aboutLabel = nav[1]?.key ?? "ABOUT US";
   const productsLabel = nav[2]?.key ?? "PRODUCTS";
   const technologyLabel = nav[3]?.key ?? "TECHNOLOGY";
@@ -48,7 +63,7 @@ export function SiteHeader({ locale, nav, page = "home" }: Props) {
   return (
     <header className="fixed left-0 right-0 top-0 z-30 border-b border-white/10 bg-[rgba(2,8,30,0.78)] backdrop-blur-md">
       <div className="mx-auto flex h-[80px] w-full max-w-7xl items-center gap-4 px-4 sm:px-6">
-        <a href={`/${locale}`} className="flex shrink-0 items-center gap-3">
+        <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-sm font-black italic text-white shadow-[0_0_20px_rgba(59,130,246,0.35)]">
             TY
           </span>
@@ -58,20 +73,27 @@ export function SiteHeader({ locale, nav, page = "home" }: Props) {
               <p className="text-[10px] uppercase tracking-[0.16em] text-blue-300">Taiyang Diamond Products</p>
             ) : null}
           </div>
-        </a>
+        </Link>
 
         <nav className="ml-auto hidden items-center gap-10 py-2 text-sm font-semibold uppercase tracking-widest text-slate-400 lg:flex">
           {navItems.map((item) => {
+            const current = pathnameWithoutTrailingSlash(pathname);
+            const target = pathnameWithoutTrailingSlash(item.href);
+            const productsPath = pathnameWithoutTrailingSlash(`/${locale}/products`);
             const isActive =
-              pathname === item.href ||
-              (item.href.includes("#technology") && pathname.endsWith("/products")) ||
-              (item.href.includes("#network") && pathname.endsWith("/products"));
+              current === target ||
+              (item.href.includes("#technology") &&
+                current === productsPath &&
+                locationHash === "#technology") ||
+              (item.href.includes("#network") && current === productsPath && locationHash === "#network");
             return (
               <Link
                 key={item.key + item.href}
                 href={item.href}
                 className={`whitespace-nowrap border-b-2 pb-1 transition-colors ${
-                  locale === "zh" ? "normal-case tracking-wide text-base" : "text-base"
+                  locale === "zh"
+                    ? "normal-case tracking-wide text-base"
+                    : "text-sm tracking-wide"
                 } ${
                   isActive
                     ? "border-blue-500 text-blue-500"

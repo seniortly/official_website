@@ -1,6 +1,8 @@
 import { HeroTechBackdrop } from "@/components/HeroTechBackdrop";
-import { notFound } from "next/navigation";
+import { publicPath } from "@/lib/base-path";
 import { siteContent, supportedLocales, type Locale } from "@/lib/site-content";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 import { SiteHeader } from "./SiteHeader";
 
 type PageProps = {
@@ -100,31 +102,27 @@ export default function LocaleHomePage({ params }: PageProps) {
               {content.slogan}
             </p>
             <div className="flex flex-wrap gap-6">
-              <a
+              <Link
                 href={`/${locale}/products#contact`}
                 className="rounded-lg bg-blue-600 px-8 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-xl shadow-blue-600/40 transition-all hover:bg-blue-500"
               >
                 Request A Quote
-              </a>
-              <a
+              </Link>
+              <Link
                 href={`/${locale}/products`}
                 className="rounded-lg border border-white/20 px-8 py-4 text-sm font-bold text-white transition-all hover:bg-white/10"
               >
                 {locale === "zh" ? "浏览产品手册" : "Browse Catalog"}
-              </a>
+              </Link>
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center">
-            <div className="relative flex h-72 w-72 items-center justify-center md:h-[450px] md:w-[450px]">
-              <div className="absolute inset-0 rounded-full border-2 border-dashed border-blue-500/20 animate-[spin_18s_linear_infinite]" />
-              <div className="absolute inset-12 rounded-full border border-blue-400/10" />
-              <div className="flex h-48 w-48 items-center justify-center rounded-full border border-blue-500/30 bg-slate-900 shadow-[0_0_100px_rgba(37,99,235,0.2)] md:h-80 md:w-80">
-                <span className="text-8xl font-black italic tracking-tighter text-white drop-shadow-2xl md:text-[160px]">
-                  TY
-                </span>
-              </div>
-            </div>
+          <div className="flex items-center justify-center">
+            <img
+              src={publicPath("/image/test.gif")}
+              alt=""
+              className="h-auto w-full"
+            />
           </div>
         </div>
       </section>
@@ -201,7 +199,7 @@ export default function LocaleHomePage({ params }: PageProps) {
 
             <div className="relative h-full">
               <img
-                src="/image/第3页-9.PNG"
+                src={publicPath("/image/第3页-9.PNG")}
                 alt=""
                 className="h-full min-h-[460px] w-full rounded-2xl border border-white/10 object-cover shadow-2xl"
               />
@@ -252,13 +250,13 @@ export default function LocaleHomePage({ params }: PageProps) {
               { zh: "钻削工具", en: "Drilling Tools",      sub: "DRILLING TOOLS",   img: "/image/第3页-6.PNG"  },
               { zh: "气动与混凝土", en: "Air & Concrete",  sub: "AIR & CONCRETE",   img: "/image/第3页-4.PNG"  },
             ].map((item) => (
-              <a
+              <Link
                 key={item.sub}
                 href={`/${locale}/products`}
                 className="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-xl border border-white/10 bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40"
               >
                 <img
-                  src={item.img}
+                  src={publicPath(item.img)}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover opacity-35 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-50"
                 />
@@ -267,7 +265,7 @@ export default function LocaleHomePage({ params }: PageProps) {
                   <p className="text-sm font-bold text-white">{locale === "zh" ? item.zh : item.en}</p>
                   <p className="mt-1 text-[10px] uppercase tracking-[0.14em] text-slate-500">{item.sub}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -277,7 +275,7 @@ export default function LocaleHomePage({ params }: PageProps) {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
             <img
-              src="/image/第3页-5.PNG"
+              src={publicPath("/image/第3页-5.PNG")}
               alt=""
               className="h-full min-h-[540px] w-full rounded-2xl border border-white/10 object-cover shadow-[0_20px_80px_rgba(2,6,23,0.55)]"
             />
@@ -364,7 +362,7 @@ export default function LocaleHomePage({ params }: PageProps) {
                 className="group relative aspect-square overflow-hidden rounded-xl border border-white/10"
               >
                 <img
-                  src={item.img}
+                  src={publicPath(item.img)}
                   alt={locale === "zh" ? item.labelZh : item.labelEn}
                   className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                 />
@@ -396,12 +394,12 @@ export default function LocaleHomePage({ params }: PageProps) {
               placeholder={locale === "zh" ? "您的称呼 / 公司名称" : "Your Name / Company"}
               className="h-12 flex-1 rounded-lg border border-white/15 bg-slate-900/70 px-4 text-sm text-slate-100 outline-none ring-blue-500/40 focus:ring-2"
             />
-            <a
+            <Link
               href={`/${locale}/products#contact`}
               className="inline-flex h-12 items-center justify-center rounded-lg bg-blue-600 px-8 text-sm font-bold text-white shadow-[0_0_26px_rgba(37,99,235,0.42)] transition hover:bg-blue-500"
             >
               {locale === "zh" ? "提交申请" : "Submit"}
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -427,10 +425,10 @@ export default function LocaleHomePage({ params }: PageProps) {
                 {locale === "zh" ? "快速导航" : "Quick Links"}
               </h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li><a href={`/${locale}/about`} className="hover:text-blue-300">{locale === "zh" ? "关于我们" : "About Us"}</a></li>
-                <li><a href={`/${locale}/products`} className="hover:text-blue-300">{locale === "zh" ? "产品中心" : "Products"}</a></li>
-                <li><a href={`/${locale}/products#technology`} className="hover:text-blue-300">{locale === "zh" ? "技术规格表" : "Technology"}</a></li>
-                <li><a href={`/${locale}/products#network`} className="hover:text-blue-300">{locale === "zh" ? "全球分销" : "Global Network"}</a></li>
+                <li><Link href={`/${locale}/about`} className="hover:text-blue-300">{locale === "zh" ? "关于我们" : "About Us"}</Link></li>
+                <li><Link href={`/${locale}/products`} className="hover:text-blue-300">{locale === "zh" ? "产品中心" : "Products"}</Link></li>
+                <li><Link href={`/${locale}/products#technology`} className="hover:text-blue-300">{locale === "zh" ? "技术规格表" : "Technology"}</Link></li>
+                <li><Link href={`/${locale}/products#network`} className="hover:text-blue-300">{locale === "zh" ? "全球分销" : "Global Network"}</Link></li>
               </ul>
             </div>
             <div>

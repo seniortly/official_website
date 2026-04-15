@@ -1,8 +1,9 @@
 "use client";
 
+import { publicPath } from "@/lib/base-path";
+import type { Locale } from "@/lib/site-content";
 import { useMemo, useState } from "react";
 import { ContactMailForm, SiteHeader } from "../SiteHeader";
-import type { Locale } from "@/lib/site-content";
 
 type CatalogProps = {
   locale: Locale;
@@ -151,7 +152,7 @@ export function ProductsCatalog({ locale, nav, labels }: CatalogProps) {
         <div className="grid gap-6 lg:grid-cols-4">
           <aside className="space-y-5 lg:col-span-1">
             <div className="rounded-xl border border-white/10 bg-[rgba(15,23,42,0.58)] p-4">
-              <img src={current.introImage} alt="" className="h-40 w-full rounded object-cover" />
+              <img src={publicPath(current.introImage)} alt="" className="h-40 w-full rounded object-cover" />
               <h3 className="mt-4 text-lg font-bold text-white">{current.introTitle}</h3>
               <p className="mt-2 text-sm leading-7 text-slate-400">{current.introDesc}</p>
             </div>

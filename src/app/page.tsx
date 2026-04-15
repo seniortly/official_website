@@ -1,4 +1,7 @@
+import { publicPath } from "@/lib/base-path";
+
 export default function Home() {
+  const zhHome = publicPath("/zh/");
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#020617] px-6 text-slate-200">
       <div className="max-w-xl text-center">
@@ -9,11 +12,11 @@ export default function Home() {
         <p className="mt-2 text-xs text-slate-500">
           如果没有自动跳转，请点击
           {" "}
-          <a className="text-blue-400 hover:text-blue-300" href="/zh/">
-            /zh/
+          <a className="text-blue-400 hover:text-blue-300" href={zhHome}>
+            {zhHome}
           </a>
         </p>
-        <meta httpEquiv="refresh" content="0;url=/zh/" />
+        <meta httpEquiv="refresh" content={`0;url=${zhHome}`} />
       </div>
     </main>
   );
