@@ -3,10 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "TY Diamond Tools",
-    template: "%s | TY Diamond Tools",
+    default: "Zero Geometry Diamond Technology",
+    template: "%s | Zero Geometry Diamond Technology",
   },
-  description: "TY Diamond Tools corporate website template",
+  description: "Zero Geometry (Xiamen) Diamond Technology Co., Ltd. corporate website",
 };
 
 export default function RootLayout({

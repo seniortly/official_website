@@ -53,24 +53,24 @@ export function SiteHeader({ locale, nav, page = "home" }: Props) {
   const navItems = page === "home" ? homeNavItems : subNavItems;
   const brandTitle =
     page === "about"
-      ? "TY ABOUT US"
+      ? "ZG ABOUT US"
       : page === "products"
-        ? "TY TECHNICAL CENTER"
+        ? "ZG TECHNICAL CENTER"
         : locale === "zh"
-          ? "厦门泰扬金刚石"
-          : "Taiyang Diamond";
+          ? "零点几何金刚石科技"
+          : "Zero Geometry Diamond";
 
   return (
     <header className="fixed left-0 right-0 top-0 z-30 border-b border-white/10 bg-[rgba(2,8,30,0.78)] backdrop-blur-md">
       <div className="mx-auto flex h-[80px] w-full max-w-7xl items-center gap-4 px-4 sm:px-6">
         <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-sm font-black italic text-white shadow-[0_0_20px_rgba(59,130,246,0.35)]">
-            TY
+            ZG
           </span>
           <div className="hidden sm:block">
             <p className="text-sm font-bold text-white">{brandTitle}</p>
             {page === "home" ? (
-              <p className="text-[10px] uppercase tracking-[0.16em] text-blue-300">Taiyang Diamond Products</p>
+              <p className="text-[10px] uppercase tracking-[0.16em] text-blue-300">Zero Geometry Diamond Technology</p>
             ) : null}
           </div>
         </Link>
@@ -141,11 +141,9 @@ export function ContactMailForm({ copy }: { copy: FormCopy }) {
     const name = String(fd.get("name") ?? "").trim();
     const email = String(fd.get("email") ?? "").trim();
     const message = String(fd.get("message") ?? "").trim();
-    const body = encodeURIComponent(
-      ["Name / 姓名: " + name, "Email: " + email, "", message].join("\n"),
-    );
-    const subject = encodeURIComponent("Website inquiry / 官网询盘");
-    window.location.href = `mailto:sales@xmtaiying.com?subject=${subject}&body=${body}`;
+    const rawMessage = ["Website inquiry / 官网询盘", "", "Name / 姓名: " + name, "Email: " + email, "", message].join("\n");
+    const whatsappMessage = encodeURIComponent(rawMessage);
+    window.location.href = `https://wa.me/8615880255522?text=${whatsappMessage}`;
   };
 
   return (

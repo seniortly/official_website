@@ -256,7 +256,7 @@ export function ProductsCatalog({ locale, nav, labels }: CatalogProps) {
       </section>
 
       <footer className="border-t border-white/5 bg-slate-950 py-10 text-center text-xs tracking-widest text-slate-500">
-        <p>© 2026 Xiamen Taiyang Diamond Products Co., Ltd. TECHNICAL SPECIFICATIONS</p>
+        <p>© 2026 Zero Geometry (Xiamen) Diamond Technology Co., Ltd. TECHNICAL SPECIFICATIONS</p>
       </footer>
     </main>
   );

@@ -53,13 +53,13 @@ export const supportedLocales: Locale[] = ["zh", "en"];
 
 export const siteContent: Record<Locale, SiteContent> = {
   zh: {
-    company: "厦门台颖金刚石制品有限公司",
-    slogan: "CUSTOM-BUILT · EXPERTLY MADE · 始于 1998",
+    company: "零点几何（厦门）金刚石科技有限公司",
+    slogan: "CUSTOM-BUILT · EXPERTLY MADE",
     quoteLabel: "获取报价",
     aboutTitle: "公司简介",
     aboutProfileSubtitle: "COMPANY PROFILE",
     aboutDesc:
-      "厦门台颖金刚石制品有限公司成立于1998年，专业从事金刚石工具的研发、制造与销售。公司持续引入先进自动化设备，拥有经验丰富的工程师团队，并通过 ISO9001 质量管理体系认证，产品广泛应用于天然石材与人造石材加工。",
+      "零点几何（厦门）金刚石科技有限公司专注于金刚石工具的研发、制造与销售。公司持续引入先进自动化设备，拥有经验丰富的工程师团队，并通过 ISO9001 质量管理体系认证，产品广泛应用于天然石材与人造石材加工。",
     aboutAdvantagesTitle: "公司优势",
     aboutAdvantagesSubtitle: "OUR ADVANTAGES",
     aboutAdvantages: [
@@ -153,11 +153,11 @@ export const siteContent: Record<Locale, SiteContent> = {
         "70%以上产品出口，长期服务海外市场",
       ],
       contactTitle: "联系我们",
-      contactAddress: "地址：厦门市同安区西柯镇西福路129号（361100）",
-      contactPhone: "电话：+86-592-7112398 / 7113907",
-      contactFax: "传真：+86-592-7111702",
-      contactEmail: "邮箱：sales@xmtaiying.com",
-      contactWebsite: "官网：www.xmtaiying.com",
+      contactAddress: "地址：厦门市同安区西柯街道银城智谷A12栋1501室",
+      contactPhone: "WhatsApp：+86 15880255522",
+      contactFax: "传真：暂无",
+      contactEmail: "邮箱：暂无",
+      contactWebsite: "官网：暂无",
       formName: "姓名",
       formEmail: "邮箱",
       formMessage: "需求内容",
@@ -165,13 +165,13 @@ export const siteContent: Record<Locale, SiteContent> = {
     },
   },
   en: {
-    company: "Xiamen TY Diamond Tools Co., Ltd.",
-    slogan: "Custom-Built, Expertly Made. Since 1998.",
+    company: "Zero Geometry (Xiamen) Diamond Technology Co., Ltd.",
+    slogan: "Custom-Built, Expertly Made.",
     quoteLabel: "Request a Quote",
     aboutTitle: "Company Profile",
     aboutProfileSubtitle: "公司简介",
     aboutDesc:
-      "Established in 1998, Xiamen Taiying Diamond Products Co., Ltd. specializes in the R&D, manufacturing and sales of diamond tools. Backed by advanced automated equipment, senior engineers and ISO9001-certified quality control, we supply solutions for both natural and engineered stone processing.",
+      "Zero Geometry (Xiamen) Diamond Technology Co., Ltd. specializes in the R&D, manufacturing and sales of diamond tools. Backed by advanced automated equipment, senior engineers and ISO9001-certified quality control, we supply solutions for both natural and engineered stone processing.",
     aboutAdvantagesTitle: "Our Advantages",
     aboutAdvantagesSubtitle: "公司优势",
     aboutAdvantages: [
@@ -200,7 +200,7 @@ export const siteContent: Record<Locale, SiteContent> = {
     sections: {
       networkTitle: "Global Network",
       networkDesc:
-        "Taiying ships worldwide with long-term partners across Europe, the Americas, the Middle East and Southeast Asia—backed by export documentation and technical support.",
+        "Our products ship worldwide with long-term partners across Europe, the Americas, the Middle East and Southeast Asia, backed by export documentation and technical support.",
       productsTitle: "Products",
       products: [
         {
@@ -251,7 +251,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       ],
       technologyTitle: "Technology & Capability",
       technologyDesc:
-        "With 30+ automated and semi-automated machines, Taiying keeps upgrading processing technology to improve cutting efficiency, durability and product consistency.",
+        "With 30+ automated and semi-automated machines, we keep upgrading processing technology to improve cutting efficiency, durability and product consistency.",
       capabilities: [
         "Advanced manufacturing processes and equipment",
         "Six senior engineers with 15+ years of experience",
@@ -266,11 +266,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       ],
       contactTitle: "Contact",
       contactAddress:
-        "Address: No.129, Xifu Road, Xike Town, Tongan District, Xiamen, Fujian, China (361100)",
-      contactPhone: "Tel: +86-592-7112398 / 7113907",
-      contactFax: "Fax: +86-592-7111702",
-      contactEmail: "Email: sales@xmtaiying.com",
-      contactWebsite: "Website: www.xmtaiying.com",
+        "Address: Room 1501, Building A12, Yincheng Zhigu, Xike Sub-district, Tong'an District, Xiamen City",
+      contactPhone: "WhatsApp: +86 15880255522",
+      contactFax: "Fax: N/A",
+      contactEmail: "Email: N/A",
+      contactWebsite: "Website: N/A",
       formName: "Your Name",
       formEmail: "Email",
       formMessage: "Message",

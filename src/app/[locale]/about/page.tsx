@@ -60,7 +60,7 @@ export default function AboutPage({ params }: PageProps) {
             <h1 className="text-5xl font-black leading-tight text-white md:text-6xl">
               {locale === "zh" ? "精密制造" : "Precision Manufacturing"}
               <br />
-              <span className="text-blue-500">{locale === "zh" ? "源于 1998" : "Since 1998"}</span>
+              <span className="text-blue-500">{locale === "zh" ? "专注金刚石工具" : "Focused on Diamond Tools"}</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-300">{content.aboutDesc}</p>
             <div className="mt-6 space-y-4 text-sm leading-7 text-slate-400">
@@ -71,7 +71,7 @@ export default function AboutPage({ params }: PageProps) {
               </p>
               <p>
                 {locale === "zh"
-                  ? "泰扬团队拥有资深工程师与完善质量体系，确保产品在锋利度、寿命与稳定性上的长期表现。"
+                  ? "零点几何团队拥有资深工程师与完善质量体系，确保产品在锋利度、寿命与稳定性上的长期表现。"
                   : "Our senior engineering team and strict quality system ensure long-term performance in sharpness, durability and consistency."}
               </p>
             </div>
@@ -136,15 +136,15 @@ export default function AboutPage({ params }: PageProps) {
                   <h4 className="text-xl font-bold text-blue-500">1998</h4>
                   <p className="mt-2 text-sm text-slate-400">
                     {locale === "zh"
-                      ? "厦门泰扬金刚石制品有限公司正式成立"
-                      : "Taiyang Diamond Products founded in Xiamen"}
+                      ? "零点几何（厦门）金刚石科技有限公司品牌启航"
+                      : "Zero Geometry Diamond Technology launched in Xiamen"}
                   </p>
                 </div>
                 <div className="z-10 h-4 w-4 shrink-0 rounded-full border-4 border-slate-950 bg-blue-500" />
                 <div className="text-center md:w-1/2 md:pl-12 md:text-left">
                   <h4 className="text-xl font-bold text-blue-500 md:hidden">1998</h4>
                   <p className="mt-2 text-sm text-slate-400 md:hidden">
-                    {locale === "zh" ? "泰扬正式成立" : "Taiyang founded"}
+                    {locale === "zh" ? "零点几何启航" : "Zero Geometry launched"}
                   </p>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-600">
                     {locale === "zh" ? "开启制造纪元" : "Manufacturing Begins"}
@@ -217,7 +217,7 @@ export default function AboutPage({ params }: PageProps) {
       </section>
 
       <footer className="border-t border-white/5 bg-slate-950 py-10 text-center text-xs tracking-widest text-slate-500">
-        <p>© 2026 Xiamen Taiyang Diamond Products Co., Ltd. ABOUT US</p>
+        <p>© 2026 Zero Geometry (Xiamen) Diamond Technology Co., Ltd. ABOUT US</p>
       </footer>
     </main>
   );

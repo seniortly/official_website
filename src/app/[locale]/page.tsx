@@ -89,7 +89,7 @@ export default function LocaleHomePage({ params }: PageProps) {
           <div className="text-left lg:pl-10 xl:pl-14">
             <div className="mb-6 inline-flex items-center gap-2 rounded border border-blue-500/20 bg-blue-600/10 px-3 py-1 text-xs font-bold text-blue-400">
               <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
-              {locale === "zh" ? "SINCE 1998 · 全球领先金刚石工具制造商" : "SINCE 1998 · Leading Diamond Tool Maker"}
+              {locale === "zh" ? "全球领先金刚石工具制造商" : "Leading Diamond Tool Maker"}
             </div>
             <h1 className="mb-6 text-5xl font-black leading-tight text-white lg:text-7xl">
               Custom-Built,
@@ -156,17 +156,17 @@ export default function LocaleHomePage({ params }: PageProps) {
             <div>
               <div className="mb-6 inline-flex items-center gap-2 rounded bg-blue-600/20 px-3 py-1 text-xs font-bold text-blue-400">
                 <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
-                {locale === "zh" ? "SINCE 1998 · 品牌实力" : "SINCE 1998 · Brand Strength"}
+                {locale === "zh" ? "品牌实力" : "Brand Strength"}
               </div>
               <h3 className="mb-6 text-4xl font-bold text-white">
                 {locale === "zh" ? "深耕金刚石工具制造" : "Deep in Diamond Tool Manufacturing"}
                 <br />
-                <span className="text-blue-500">{locale === "zh" ? "28载专业积淀" : "28 Years of Expertise"}</span>
+                <span className="text-blue-500">{locale === "zh" ? "专业制造积淀" : "Professional Manufacturing Expertise"}</span>
               </h3>
               <p className="mb-8 text-lg leading-relaxed text-slate-400">
                 {locale === "zh"
-                  ? "厦门泰扬金刚石制品有限公司成立于1998年，是一家专业从事金刚石工具研发、生产和销售的领先制造商。我们持续投入先进工艺与设备，目前拥有30余台自动化及半自动化设备，并通过ISO9001质量管理体系认证。"
-                  : "Founded in 1998, Xiamen Taiyang is a leading manufacturer focused on diamond tool R&D, production and sales. We continuously invest in advanced processes and equipment, operate 30+ automated/semi-automated machines, and maintain ISO9001 quality certification."}
+                  ? "零点几何（厦门）金刚石科技有限公司是一家专业从事金刚石工具研发、生产和销售的领先制造商。我们持续投入先进工艺与设备，目前拥有30余台自动化及半自动化设备，并通过ISO9001质量管理体系认证。"
+                  : "Zero Geometry (Xiamen) Diamond Technology Co., Ltd. is a leading manufacturer focused on diamond tool R&D, production and sales. We continuously invest in advanced processes and equipment, operate 30+ automated/semi-automated machines, and maintain ISO9001 quality certification."}
               </p>
 
               <div className="grid grid-cols-2 gap-6">
@@ -281,7 +281,7 @@ export default function LocaleHomePage({ params }: PageProps) {
             />
           </div>
           <div className="order-1 lg:order-2">
-            <h3 className="mb-8 text-4xl font-bold text-white">{locale === "zh" ? "为什么选择泰扬？" : "Why Taiyang?"}</h3>
+            <h3 className="mb-8 text-4xl font-bold text-white">{locale === "zh" ? "为什么选择零点几何？" : "Why Zero Geometry?"}</h3>
             <div className="space-y-6">
               <div className="flex gap-4 rounded-xl border border-white/10 bg-[rgba(15,23,42,0.66)] p-6 transition-all hover:border-blue-500/50">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded bg-blue-600/20">
@@ -385,8 +385,8 @@ export default function LocaleHomePage({ params }: PageProps) {
           </h2>
           <p className="mt-4 text-lg text-slate-300">
             {locale === "zh"
-              ? "无论您在哪个国家，泰扬的专家团队都准备好为您提供专业服务。"
-              : "Wherever you are, Taiyang experts are ready to support your project."}
+              ? "无论您在哪个国家，零点几何的专家团队都准备好为您提供专业服务。"
+              : "Wherever you are, Zero Geometry experts are ready to support your project."}
           </p>
           <div className="mx-auto mt-8 flex max-w-xl flex-col gap-3 sm:flex-row">
             <input
@@ -409,15 +409,15 @@ export default function LocaleHomePage({ params }: PageProps) {
           <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <div className="mb-5 flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded bg-blue-600 text-sm font-black italic text-white">TY</span>
+                <span className="flex h-9 w-9 items-center justify-center rounded bg-blue-600 text-sm font-black italic text-white">ZG</span>
                 <span className="text-base font-bold text-white">
-                  {locale === "zh" ? "厦门泰扬金刚石" : "Taiyang Diamond"}
+                  {locale === "zh" ? "零点几何金刚石科技" : "Zero Geometry Diamond"}
                 </span>
               </div>
               <p className="text-sm leading-7 text-slate-400">
                 {locale === "zh"
-                  ? "自1998年以来，专注金刚石工具制造。通过ISO9001体系认证，产品长期出口至海外市场。"
-                  : "Since 1998, focused on diamond tool manufacturing with ISO9001 quality system and global export service."}
+                  ? "专注金刚石工具制造。通过ISO9001体系认证，产品长期出口至海外市场。"
+                  : "Focused on diamond tool manufacturing with ISO9001 quality system and global export service."}
               </p>
             </div>
             <div>
@@ -447,14 +447,18 @@ export default function LocaleHomePage({ params }: PageProps) {
                 {locale === "zh" ? "联系方式" : "Contact"}
               </h4>
               <ul className="space-y-2 text-sm text-slate-400">
-                <li>sales@xmtaiying.com</li>
-                <li>www.xmtaiying.com</li>
-                <li>{locale === "zh" ? "厦门市同安工业区工业路 XXX 号" : "Xiamen Tongan Industrial Area"}</li>
+                <li>WhatsApp: +86 15880255522</li>
+                <li>{locale === "zh" ? "官网：暂无" : "Website: N/A"}</li>
+                <li>
+                  {locale === "zh"
+                    ? "厦门市同安区西柯街道银城智谷A12栋1501室"
+                    : "Room 1501, Building A12, Yincheng Zhigu, Xike Sub-district, Tong'an District, Xiamen City"}
+                </li>
               </ul>
             </div>
           </div>
           <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 text-xs uppercase tracking-widest text-slate-500 md:flex-row">
-            <p>© 2026 Xiamen Taiyang Diamond Products Co., Ltd. All Rights Reserved.</p>
+            <p>© 2026 Zero Geometry (Xiamen) Diamond Technology Co., Ltd. All Rights Reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-blue-300">Privacy Policy</a>
               <a href="#" className="hover:text-blue-300">Terms of Service</a>

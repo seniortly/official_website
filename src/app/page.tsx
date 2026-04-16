@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-[#020617] px-6 text-slate-200">
       <div className="max-w-xl text-center">
-        <h1 className="text-2xl font-bold text-white">TY Diamond Tools</h1>
+        <h1 className="text-2xl font-bold text-white">Zero Geometry Diamond Technology</h1>
         <p className="mt-3 text-sm text-slate-400">
           Redirecting to Chinese homepage...
         </p>
