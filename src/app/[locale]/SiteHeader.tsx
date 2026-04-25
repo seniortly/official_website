@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { FormEvent } from "react";
 import { useEffect, useState } from "react";
 import type { Locale } from "@/lib/site-content";
+import { publicPath } from "@/lib/base-path";
 
 type NavItem = { key: string; href: string };
 
@@ -64,9 +65,11 @@ export function SiteHeader({ locale, nav, page = "home" }: Props) {
     <header className="fixed left-0 right-0 top-0 z-30 border-b border-white/10 bg-[rgba(2,8,30,0.78)] backdrop-blur-md">
       <div className="mx-auto flex h-[80px] w-full max-w-7xl items-center gap-4 px-4 sm:px-6">
         <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 text-sm font-black italic text-white shadow-[0_0_20px_rgba(59,130,246,0.35)]">
-            ZG
-          </span>
+          <img
+            src={publicPath("/logo.png")}
+            alt="ZG Logo"
+            className="h-10 w-10 rounded-lg object-contain"
+          />
           <div className="hidden sm:block">
             <p className="text-sm font-bold text-white">{brandTitle}</p>
             {page === "home" ? (

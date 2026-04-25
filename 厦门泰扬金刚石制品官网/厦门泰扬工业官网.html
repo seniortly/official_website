@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>厦门泰扬金刚石制品有限公司 | 现代化工业工具制造商</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.3.4.3.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.1.0.7.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/echarts.min.5.4.3.js"></script>
+<style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .hex-clip {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+        .metal-gradient {
+            background: linear-gradient(135deg, #f3f4f6 0%, #9ca3af 50%, #4b5563 100%);
+        }
+        .tech-grid-bg {
+            background-image: radial-gradient(#1e3a8a 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-blue-500 selection:text-white">
+<!-- 导航栏 -->
+<nav class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-600 rounded flex items-center justify-center shadow-lg shadow-blue-500/20">
+<span class="text-2xl font-black text-white italic">TY</span>
+</div>
+<div class="hidden md:block">
+<h1 class="text-lg font-bold tracking-wider text-white">厦门泰扬金刚石</h1>
+<p class="text-[10px] text-slate-400 uppercase tracking-[0.2em]">Taiyang Diamond Products</p>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-slate-300">
+<a class="hover:text-blue-400 transition-colors" href="#">HOME</a>
+<a class="hover:text-blue-400 transition-colors" href="#about">ABOUT US</a>
+<a class="hover:text-blue-400 transition-colors" href="#products">PRODUCTS</a>
+<a class="hover:text-blue-400 transition-colors" href="#technology">TECHNOLOGY</a>
+<a class="hover:text-blue-400 transition-colors" href="#">GLOBAL NETWORK</a>
+<a class="px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/30" href="#">CONTACT</a>
+</div>
+<button class="lg:hidden text-2xl text-white">
+<iconify-icon icon="line-md:menu"></iconify-icon>
+</button>
+</div>
+</nav>
+<!-- 主视觉区 Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<!-- 背景层 -->
+<div class="absolute inset-0 z-0">
+<img alt="Modern city skyline and high-tech factory workshop fusion" class="w-full h-full object-cover opacity-30 grayscale" src="https://modao.cc/agent-py/media/generated_images/2026-04-07/38ad4ea306dc48c187e1488f6cbf86ae.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950"></div>
+<div class="absolute inset-0 tech-grid-bg opacity-20"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+<div class="inline-block mb-6 relative">
+<div class="w-32 h-32 md:w-48 md:h-48 border-[6px] border-blue-500/30 rounded-full flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-blue-600/10 group-hover:bg-blue-600/20 transition-all"></div>
+<span class="text-6xl md:text-8xl font-black text-white italic tracking-tighter drop-shadow-2xl z-10">TY</span>
+<!-- 模拟锯片齿纹 -->
+<div class="absolute inset-0 border-[10px] border-dotted border-white/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
+</div>
+</div>
+<h2 class="text-4xl md:text-7xl font-bold text-white mb-4 tracking-tight">厦门泰扬金刚石制品有限公司</h2>
+<p class="text-xl md:text-2xl text-blue-400 font-light mb-10 tracking-[0.3em] uppercase">Custom-Built, Expertly Made. Since 1998.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded shadow-2xl shadow-blue-600/40 transition-all transform hover:-translate-y-1" href="#quote">
+                    REQUEST A QUOTE
+                </a>
+<a class="px-10 py-4 border border-white/20 hover:bg-white/10 text-white font-bold rounded transition-all" href="#about">
+                    了解更多公司实力
+                </a>
+</div>
+</div>
+<!-- 装饰数据 -->
+<div class="absolute bottom-10 left-10 hidden xl:block glass-panel p-4 rounded-lg w-64">
+<div class="h-24 w-full" id="miniChart"></div>
+<p class="text-[10px] text-slate-400 mt-2 text-center uppercase tracking-widest">Global Export Growth Index</p>
+</div>
+</section>
+<!-- 公司简介与核心优势 -->
+<section class="py-24 bg-slate-900/50" id="about">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-blue-600/20 text-blue-400 text-xs font-bold mb-6">
+<iconify-icon icon="mdi:shield-check"></iconify-icon>
+                        SINCE 1998 · 品牌实力
+                    </div>
+<h3 class="text-4xl font-bold text-white mb-6">深耕金刚石工具制造<br/><span class="text-blue-500">28载专业积淀</span></h3>
+<p class="text-slate-400 leading-relaxed mb-8 text-lg">
+                        厦门泰扬金刚石制品有限公司成立于1998年，是一家专业从事金刚石工具研发、生产和销售的领先制造商。我们始终致力于投入先进的生产工艺与设备，目前拥有超过30台自动化及半自动化制造设备。通过ISO9001:2000质量管理体系认证，泰扬始终保持生产符合国际标准的顶尖金刚石工具。
+                    </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="p-6 bg-slate-800/50 rounded-xl border border-white/5">
+<h4 class="text-3xl font-bold text-white mb-2">30+</h4>
+<p class="text-sm text-slate-400">先进自动化生产设备</p>
+</div>
+<div class="p-6 bg-slate-800/50 rounded-xl border border-white/5">
+<h4 class="text-3xl font-bold text-white mb-2">70%</h4>
+<p class="text-sm text-slate-400">产品远销全球市场</p>
+</div>
+<div class="p-6 bg-slate-800/50 rounded-xl border border-white/5">
+<h4 class="text-3xl font-bold text-white mb-2">6名</h4>
+<p class="text-sm text-slate-400">15年以上经验资深工程师</p>
+</div>
+<div class="p-6 bg-slate-800/50 rounded-xl border border-white/5">
+<h4 class="text-3xl font-bold text-white mb-2">ISO</h4>
+<p class="text-sm text-slate-400">9001质量体系管理认证</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<img alt="Xiamen Taiyang Factory Building" class="rounded-2xl shadow-2xl border border-white/10" src="https://modao.cc/agent-py/media/generated_images/2026-04-07/733d393481b445e3ac98dc32ec49bc9f.jpg"/>
+<div class="absolute -bottom-8 -left-8 glass-panel p-8 rounded-2xl hidden md:block">
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-white">
+<iconify-icon class="text-blue-500" icon="mdi:check-circle"></iconify-icon>
+<span>先进的制造工艺及设备</span>
+</li>
+<li class="flex items-center gap-3 text-white">
+<iconify-icon class="text-blue-500" icon="mdi:check-circle"></iconify-icon>
+<span>定制化研发支持 (OEM/ODM)</span>
+</li>
+<li class="flex items-center gap-3 text-white">
+<iconify-icon class="text-blue-500" icon="mdi:check-circle"></iconify-icon>
+<span>严格的质量保证体系</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 产品分类模块 -->
+<section class="py-24 relative" id="products">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h3 class="text-3xl md:text-5xl font-bold text-white mb-4">核心产品体系</h3>
+<p class="text-slate-500 tracking-widest uppercase">Comprehensive Diamond Tool Solutions</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+<!-- 石材切割 -->
+<div class="group flex flex-col items-center text-center">
+<div class="hex-clip w-32 h-36 bg-slate-800 flex items-center justify-center mb-4 transition-all group-hover:bg-blue-600 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+<iconify-icon class="text-5xl text-blue-400 group-hover:text-white transition-colors" icon="mdi:shredder"></iconify-icon>
+</div>
+<h4 class="text-white font-bold group-hover:text-blue-400">石材切割工具</h4>
+<p class="text-[10px] text-slate-500 mt-1 uppercase">Stone Cutting</p>
+</div>
+<!-- 轮廓铣削 -->
+<div class="group flex flex-col items-center text-center">
+<div class="hex-clip w-32 h-36 bg-slate-800 flex items-center justify-center mb-4 transition-all group-hover:bg-blue-600 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+<iconify-icon class="text-5xl text-blue-400 group-hover:text-white transition-colors" icon="mdi:vibrate"></iconify-icon>
+</div>
+<h4 class="text-white font-bold group-hover:text-blue-400">轮廓铣削工具</h4>
+<p class="text-[10px] text-slate-500 mt-1 uppercase">Profiling &amp; Milling</p>
+</div>
+<!-- 磨削抛光 -->
+<div class="group flex flex-col items-center text-center">
+<div class="hex-clip w-32 h-36 bg-slate-800 flex items-center justify-center mb-4 transition-all group-hover:bg-blue-600 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+<iconify-icon class="text-5xl text-blue-400 group-hover:text-white transition-colors" icon="mdi:sparkles"></iconify-icon>
+</div>
+<h4 class="text-white font-bold group-hover:text-blue-400">磨削抛光工具</h4>
+<p class="text-[10px] text-slate-500 mt-1 uppercase">Grinding &amp; Polishing</p>
+</div>
+<!-- 钻削工具 -->
+<div class="group flex flex-col items-center text-center">
+<div class="hex-clip w-32 h-36 bg-slate-800 flex items-center justify-center mb-4 transition-all group-hover:bg-blue-600 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+<iconify-icon class="text-5xl text-blue-400 group-hover:text-white transition-colors" icon="mdi:drill"></iconify-icon>
+</div>
+<h4 class="text-white font-bold group-hover:text-blue-400">钻削工具</h4>
+<p class="text-[10px] text-slate-500 mt-1 uppercase">Drilling Tools</p>
+</div>
+<!-- 气动与混凝土 -->
+<div class="group flex flex-col items-center text-center">
+<div class="hex-clip w-32 h-36 bg-slate-800 flex items-center justify-center mb-4 transition-all group-hover:bg-blue-600 group-hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
+<iconify-icon class="text-5xl text-blue-400 group-hover:text-white transition-colors" icon="mdi:tools"></iconify-icon>
+</div>
+<h4 class="text-white font-bold group-hover:text-blue-400">气动与混凝土工具</h4>
+<p class="text-[10px] text-slate-500 mt-1 uppercase">Air &amp; Concrete</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 重点产品展示区 -->
+<section class="py-24 bg-slate-950" id="technology">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+<div class="max-w-2xl">
+<h3 class="text-3xl font-bold text-white mb-4">中径锯片 / Medium Saw Blade</h3>
+<p class="text-slate-400">高档有序排列锯片，软胎体搭配高品质金刚石，适用于硬花岗岩、大理石、天然石英石、人造石英石等，展现极致锋利度与超长寿命。</p>
+</div>
+<div class="text-blue-400 font-mono text-sm">Ultra Arix Series v4.2</div>
+</div>
+<div class="grid lg:grid-cols-3 gap-10">
+<!-- 产品图 -->
+<div class="lg:col-span-1 glass-panel rounded-2xl p-6 flex items-center justify-center group overflow-hidden">
+<img alt="Medium Saw Blade Detail" class="w-full transform group-hover:scale-110 transition-transform duration-700" src="https://modao.cc/agent-py/media/generated_images/2026-04-07/6333a722d8ec491d872d899a2763eac8.jpg"/>
+<div class="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- 技术表格 -->
+<div class="lg:col-span-2 overflow-x-auto">
+<h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+<iconify-icon class="text-blue-500" icon="mdi:table-settings"></iconify-icon>
+                        有序排列花岗石锯片规格表 (Arix Granite Blade Spec.)
+                    </h4>
+<table class="w-full text-sm text-left border-collapse">
+<thead>
+<tr class="bg-blue-900/40 text-blue-300">
+<th class="p-3 border border-white/10">产品编号</th>
+<th class="p-3 border border-white/10">外径(inch/mm)</th>
+<th class="p-3 border border-white/10">内孔(mm)</th>
+<th class="p-3 border border-white/10">锯片厚度(mm)</th>
+<th class="p-3 border border-white/10">齿数</th>
+</tr>
+</thead>
+<tbody class="text-slate-300">
+<tr class="hover:bg-white/5 transition-colors">
+<td class="p-3 border border-white/5">GBU-14</td>
+<td class="p-3 border border-white/5">14" / 350mm</td>
+<td class="p-3 border border-white/5">20/50/60</td>
+<td class="p-3 border border-white/5">3.2</td>
+<td class="p-3 border border-white/5">24</td>
+</tr>
+<tr class="bg-white/5 hover:bg-white/10 transition-colors">
+<td class="p-3 border border-white/5">GBU-16</td>
+<td class="p-3 border border-white/5">16" / 400mm</td>
+<td class="p-3 border border-white/5">20/50/60</td>
+<td class="p-3 border border-white/5">3.4</td>
+<td class="p-3 border border-white/5">28</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="p-3 border border-white/5">GBU-18</td>
+<td class="p-3 border border-white/5">18" / 450mm</td>
+<td class="p-3 border border-white/5">20/50/60</td>
+<td class="p-3 border border-white/5">3.8</td>
+<td class="p-3 border border-white/5">32</td>
+</tr>
+<tr class="bg-white/5 hover:bg-white/10 transition-colors">
+<td class="p-3 border border-white/5">GBU-24</td>
+<td class="p-3 border border-white/5">24" / 600mm</td>
+<td class="p-3 border border-white/5">20/50/60</td>
+<td class="p-3 border border-white/5">4.8</td>
+<td class="p-3 border border-white/5">36</td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors">
+<td class="p-3 border border-white/5">GBU-32</td>
+<td class="p-3 border border-white/5">32" / 800mm</td>
+<td class="p-3 border border-white/5">20/50/60</td>
+<td class="p-3 border border-white/5">5.8</td>
+<td class="p-3 border border-white/5">48</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- 工厂设备展示区 -->
+<section class="py-24 bg-slate-900">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<h3 class="text-3xl font-bold text-white mb-4 uppercase tracking-widest">先进的自动化专业制造设备</h3>
+<p class="text-slate-500 mb-12">Advanced Automated Professional Manufacturing Equipment</p>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group relative aspect-square overflow-hidden rounded-xl border border-white/10">
+<img alt="Automated CNC Machine" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://modao.cc/agent-py/media/generated_images/2026-04-07/e4875d79dfec4dfaa840aa125aff81d9.jpg"/>
+<div class="absolute inset-0 bg-blue-600/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+<span class="text-white font-bold px-4 py-2 border border-white">精密数控加工</span>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-xl border border-white/10">
+<img alt="Assembly Line" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://modao.cc/agent-py/media/generated_images/2026-04-07/547de3217a9a4b5ea27d85929665a9eb.jpg"/>
+<div class="absolute inset-0 bg-blue-600/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+<span class="text-white font-bold px-4 py-2 border border-white">自动化装配</span>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-xl border border-white/10">
+<img alt="Quality Inspection" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://modao.cc/agent-py/media/generated_images/2026-04-07/cb66997b0caf4a2e8d416b5ea64ea5b7.jpg"/>
+<div class="absolute inset-0 bg-blue-600/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+<span class="text-white font-bold px-4 py-2 border border-white">严苛质检中心</span>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden rounded-xl border border-white/10">
+<img alt="Heat Treatment" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://modao.cc/agent-py/media/generated_images/2026-04-07/66d13f157c8b44ec99ef4d253e734d22.jpg"/>
+<div class="absolute inset-0 bg-blue-600/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+<span class="text-white font-bold px-4 py-2 border border-white">热处理工艺</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 询盘引导区 -->
+<section class="py-24 relative overflow-hidden" id="quote">
+<div class="absolute inset-0 tech-grid-bg opacity-10"></div>
+<div class="max-w-4xl mx-auto px-6 relative z-10 glass-panel p-12 rounded-[2rem] text-center border-blue-500/20 shadow-[0_0_50px_rgba(30,58,138,0.2)]">
+<h3 class="text-3xl md:text-5xl font-black text-white mb-6 uppercase">准备好升级您的工业效率了吗？</h3>
+<p class="text-xl text-slate-400 mb-10">联系我们获取最新产品报价单及定制化技术支持方案</p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<input class="px-6 py-4 bg-slate-800 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-600 outline-none min-w-[300px] text-white" placeholder="您的企业邮箱" type="email"/>
+<button class="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg shadow-xl shadow-blue-600/30 transition-all uppercase tracking-widest">
+                    REQUEST A QUOTE
+                </button>
+</div>
+<p class="mt-6 text-sm text-slate-500 flex items-center justify-center gap-2">
+<iconify-icon icon="mdi:clock-time-four-outline"></iconify-icon>
+                我们的工程师将在 24 小时内与您取得联系
+            </p>
+</div>
+</section>
+<!-- 页脚 -->
+<footer class="bg-slate-950 border-t border-white/5 py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div>
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
+<span class="text-lg font-black text-white italic">TY</span>
+</div>
+<span class="text-xl font-bold text-white tracking-wider">厦门泰扬金刚石</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        全球领先的金刚石工具制造专家，自1998年以来专注于提供高性能切割、铣削和抛光解决方案。
+                    </p>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">产品系列</h5>
+<ul class="text-slate-500 space-y-3 text-sm">
+<li><a class="hover:text-blue-400" href="#">石材切割锯片</a></li>
+<li><a class="hover:text-blue-400" href="#">CNC加工工具</a></li>
+<li><a class="hover:text-blue-400" href="#">金刚石绳锯</a></li>
+<li><a class="hover:text-blue-400" href="#">气动研磨工具</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">快速链接</h5>
+<ul class="text-slate-500 space-y-3 text-sm">
+<li><a class="hover:text-blue-400" href="#">关于我们</a></li>
+<li><a class="hover:text-blue-400" href="#">技术研发</a></li>
+<li><a class="hover:text-blue-400" href="#">全球网络</a></li>
+<li><a class="hover:text-blue-400" href="#">人才招聘</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6">联系我们</h5>
+<ul class="text-slate-500 space-y-3 text-sm">
+<li class="flex items-start gap-2">
+<iconify-icon class="text-blue-500 mt-1" icon="mdi:map-marker"></iconify-icon>
+<span>福建省厦门市同安工业区 XXX 号</span>
+</li>
+<li class="flex items-center gap-2">
+<iconify-icon class="text-blue-500" icon="mdi:phone"></iconify-icon>
+<span>+86 (592) XXX-XXXX</span>
+</li>
+<li class="flex items-center gap-2">
+<iconify-icon class="text-blue-500" icon="mdi:web"></iconify-icon>
+<span>www.xmtaiying.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+<p>© 2026 厦门泰扬金刚石制品有限公司. 版权所有.</p>
+<div class="flex gap-6">
+<a class="hover:text-slate-400" href="#">隐私政策</a>
+<a class="hover:text-slate-400" href="#">服务条款</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // 初始化小型趋势图
+        const chartDom = document.getElementById('miniChart');
+        const myChart = echarts.init(chartDom);
+        const option = {
+            grid: { left: 0, right: 0, top: 10, bottom: 0 },
+            xAxis: { type: 'category', show: false },
+            yAxis: { type: 'value', show: false },
+            series: [{
+                data: [120, 150, 130, 180, 220, 260, 240, 310, 350, 380, 420],
+                type: 'line',
+                smooth: true,
+                symbol: 'none',
+                lineStyle: { color: '#2563eb', width: 3 },
+                areaStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        { offset: 0, color: 'rgba(37,99,235,0.4)' },
+                        { offset: 1, color: 'rgba(37,99,235,0)' }
+                    ])
+                }
+            }]
+        };
+        myChart.setOption(option);
+
+        window.addEventListener('resize', () => {
+            myChart.resize();
+        });
+    </script>
+</body>
+</html>
