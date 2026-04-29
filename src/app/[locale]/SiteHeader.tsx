@@ -62,7 +62,10 @@ export function SiteHeader({ locale, nav, page = "home" }: Props) {
           : "Zero Geometry Diamond";
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-30 border-b border-white/10 bg-[rgba(2,8,30,0.78)] backdrop-blur-md">
+    <header
+      className="fixed left-0 right-0 top-0 z-30 border-b border-white/10 bg-[rgba(2,8,30,0.78)] backdrop-blur-md overflow-hidden"
+      style={{ transform: "translateY(calc(-80px * var(--header-collapse, 0)))" }}
+    >
       <div className="mx-auto flex h-[80px] w-full max-w-7xl items-center gap-4 px-4 sm:px-6">
         <Link href={`/${locale}`} className="flex shrink-0 items-center gap-3">
           <img
